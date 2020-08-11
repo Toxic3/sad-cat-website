@@ -1,0 +1,404 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+* {
+    width: 100%;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #fe9494;
+    text-shadow: none;
+}
+
+::selection {
+    background: #fe9494;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+    background-color: #fe9494;
+}
+
+/* Header styling */
+header {
+    height: 150px;
+    font-weight: bold;
+    text-align: center;
+    background: #f1c250;
+    transition: .3s;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+header img {
+    float: left;
+    max-height: 100px;
+    width: auto;
+    margin: 25px;
+}
+
+header img:hover {
+    opacity: 0.7;
+}
+
+header h1 {
+    display: table-cell;
+    margin: 0.3em;
+}
+
+/* Navigation bar styling */
+
+.topnav {
+    list-style-type: none;
+    padding: 3px;
+    overflow: hidden;
+    background-color: #f1c250;
+    margin-bottom: 20px;
+    margin-top: 2px;
+    font-size: 22px;
+}
+  
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: auto;
+}
+  
+.topnav .active, .topnav a:hover {
+    background-color: #f1c250;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+.gallery {
+    width: 100%;
+}
+
+.gallery img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery img:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+padding-top: 100px; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+margin: auto;
+display: block;
+width: 80%;
+max-width: 700px;
+animation-name: zoom;
+animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+from {transform:scale(0)}
+to {transform:scale(1)}
+}
+  
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}  
+
+footer {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #f1c250;
+}
+
+/* Create the shadow effect for each item given this class */
+.shadow {
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         3px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    background-color: white;
+}
+
+.shadow-plus {
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         3px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    background-color: #f1c250;
+}
+
+/* Media query for large size screens */
+@media only screen and (min-width: 926px) {
+    header h1 {
+        font-size: 5em;
+    }
+}
+
+/* Media query to resize font and padding if screen is smaller */
+@media only screen and (max-width: 925px) and (min-width: 576px) {
+    header h1 {
+        font-size: 3em;
+        padding-top: 40px;
+    }
+}
+
+/* Moving header below logo for smallest devices */
+@media only screen and (max-width: 575px) {
+    header img {
+        margin-left: 160px;
+    }
+
+    header {
+        height: 100%;
+    }
+}
+
+/* Creating a responsive navigation bar */
+@media only screen and (max-width: 659px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    /* If the JavaScript set the class to responsive call this css styling */
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+
+/* Fixing a bug for screens between 690px and 576px */
+@media only screen and (max-width: 690px) and (min-width: 576px) {
+    nav {
+        margin: 0px;
+    }
+
+    nav ul {
+        padding: 0px;
+    }
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+    width: 100%;
+    }
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
